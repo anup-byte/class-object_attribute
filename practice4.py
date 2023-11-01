@@ -95,8 +95,70 @@ print()
 s1.welcomeToSchool()
 print()
 Student.welcomeToSchool()
+print()
 
 
+
+
+class MathUtils:
+    @staticmethod
+    def add(x, y):
+        return x + y
+
+    @staticmethod
+    def subtract(x, y):
+        return x - y
+
+    @staticmethod
+    def multiply(x, y):
+        return x * y
+
+    @staticmethod
+    def divide(x, y):
+        if y != 0:
+            return x / y
+        else:
+            return "Division by zero is not allowed."
+
+# Using static methods
+result_add = MathUtils.add(5, 3)
+result_subtract = MathUtils.subtract(8, 2)
+result_multiply = MathUtils.multiply(4, 6)
+result_divide = MathUtils.divide(10, 2)
+
+print("Addition:", result_add)
+print()
+print("Subtraction:", result_subtract)
+print()
+print("Multiplication:", result_multiply)
+print()
+print("Division:", result_divide)
+print()
+
+
+
+class MyClass1:
+    class_variable = "I am a class variable"
+
+    def __init__(self, value):
+        self.instance_variable = value
+
+    def instance_method(self):
+        print(f"Instance Method: {self.instance_variable}")
+        print(f"Accessing Class Variable from Instance Method: {self.class_variable}")
+
+    @classmethod
+    def class_method(cls):
+        print(f"Class Method: {cls.class_variable}")
+
+# Creating an instance of the class
+obj = MyClass1("Hello")
+
+# Accessing instance method
+obj.instance_method()
+
+# Accessing class method
+MyClass1.class_method()
 
 
 
